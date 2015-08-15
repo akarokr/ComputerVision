@@ -26,10 +26,10 @@ videoWriter = cv2.VideoWriter(VideoDirectory+'MyOutputVid.avi',
                               fps, size)
 
 # Read a frame from the camera
-sucess, frame = cameraCapture.read()
+success, frame = cameraCapture.read()
 numFramesRemaining = 10*fps -1
 
-while sucess and numFramesRemaining >0:
+while success and numFramesRemaining >0:
     videoWriter.write(frame)
     sucess, frame = cameraCapture.read()
     numFramesRemaining -= 1
