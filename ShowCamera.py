@@ -6,19 +6,18 @@ Created on Sat Aug 15 13:52:08 2015
 @author: Bruno Godoi Eilliar
 """
 
-import numpy as np
 import cv2
 
 # Objecto to capture image, default webcam on Ubuntu is video0
 cameraCapture = cv2.VideoCapture(0)
-print "Starting to video streaming. Press 'Q' to end transmission."
+print "Starting video streaming. Press 'Q' to end transmission."
 while(True):
     # Capture frame
     success, frame = cameraCapture.read()
     
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     
-    # Display the resulting frame
+    # Display the resulting frame in color and gray scale
     cv2.imshow('Gray Scale Video', gray)
     cv2.imshow('Video', frame)
     
