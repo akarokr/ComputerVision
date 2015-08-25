@@ -31,7 +31,10 @@ cv2.rectangle(frame, (w/2, h/2), (w,h), (255,0,255), 3)
 cv2.rectangle(frame, (0,0), (w/2, h/2) , (255,255,0), 3)
 # Draw a Circle
 cv2.circle(frame, (w*3/4, h/4),h/4, (0,255,255), -1)
-
+# Add text
+font = cv2.FONT_HERSHEY_SIMPLEX
+cv2.putText(frame,'GaroaHC',(10,300), 
+            font, 2,(0,255,0),2)
 
 # Show Picture
 cv2.imshow('Video', frame)
