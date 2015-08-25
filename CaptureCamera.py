@@ -12,7 +12,7 @@ import cv2
 # Change it to store on your local machine
 VideoDirectory = '/home/bruno/Videos/'
 
-# Objecto to capture image, default webcam on Ubuntu is video0
+# Object to capture image, default webcam on Ubuntu is video0
 cameraCapture = cv2.VideoCapture(0)
 fps = 30 #assumption
 

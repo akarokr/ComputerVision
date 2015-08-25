@@ -9,6 +9,7 @@ Created on Mon Aug 17 14:22:39 2015
 import cv2
 import numpy as np
 
+# Use default camera
 cameraCapture = cv2.VideoCapture(0)
 cv2.namedWindow("Video")
 # Take a picture
