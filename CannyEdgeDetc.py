@@ -30,7 +30,7 @@ while success and cv2.waitKey(1) == -1:
     # Take a frame
     success, frame = cameraCapture.read()
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    edges = cv2.Canny(gray,100,200)
+    edges = cv2.Canny(cv2.blur(gray, (1,1)),100,200)
     # Show Picture
     cv2.imshow("Video", frame)
     cv2.imshow("Canny Edges", edges)
