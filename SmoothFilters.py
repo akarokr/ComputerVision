@@ -23,7 +23,7 @@ cv2.namedWindow("Video")
 cv2.namedWindow("Filtered Video")
 print "Starting Video Streaming. Press any key to stop."
 success, frame = cameraCapture.read()
-s_frame = frame.copy()
+
 if debug: print "Frame Shape: ", np.shape(frame)
 
 while success and cv2.waitKey(1) == -1:

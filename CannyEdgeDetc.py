@@ -23,14 +23,14 @@ cv2.namedWindow("Canny Edges")
 
 print "Starting Video Streaming. Press any key to stop."
 success, frame = cameraCapture.read()
-gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+#gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 if debug: print "Frame Shape: ", np.shape(frame)
 
 while success and cv2.waitKey(1) == -1:
     # Take a frame
     success, frame = cameraCapture.read()
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    edges = cv2.Canny(cv2.blur(gray, (1,1)),100,200)
+    edges = cv2.Canny(cv2.blur(gray, (5,5)),150,150)
     # Show Picture
     cv2.imshow("Video", frame)
     cv2.imshow("Canny Edges", edges)
