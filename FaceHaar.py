@@ -34,11 +34,14 @@ while success and cv2.waitKey(1) == -1:
     # Detec faces
     faces = face_cascade.detectMultiScale(gray, 1.5, 2)
     if debug: print faces
+    # For each face, draw a rectangle around it
     for (x,y,w,h) in faces:
         cv2.rectangle(frame,(x,y),(x+w,y+h),(255,0,0),2)
         roi_gray = gray[y:y+h, x:x+w]
         roi_color = frame[y:y+h, x:x+w]
+    # Show results
     cv2.imshow("Video", frame)
-    
+
+# Release camera and close windows
 cameraCapture.release()
 cv2.destroyAllWindows()
