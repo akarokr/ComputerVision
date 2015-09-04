@@ -4,6 +4,8 @@ Gui Toolbar Example
 Created on Tue Sep  1 21:39:44 2015
 
 @author: Bruno Godoi Eilliar
+Notes:
+http://docs.opencv.org/modules/highgui/doc/user_interface.html
 """
 
 import cv2
