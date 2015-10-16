@@ -44,6 +44,8 @@ while success and cv2.waitKey(1) == -1:
         plt.clf()
         for x in [(r_hist, 'r'), (g_hist, 'g'), (b_hist, 'b')]:
             plt.plot(x[0], x[1])
+        plt.title("BGR Histogram")
+        plt.xlim((0,256))
         plt.draw()
     cv2.imshow("Video",frame)
     

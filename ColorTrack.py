@@ -19,7 +19,7 @@ def getColorHSV(event, x, y, flags, param):
         
 
 # Object to capture image, default webcam on Ubuntu is video0
-cameraCapture = cv2.VideoCapture(0)
+cameraCapture = cv2.VideoCapture(-1)
 # Size of the image (automatically)
 (w, h) = (int(cameraCapture.get(cv2.cv.CV_CAP_PROP_FRAME_WIDTH)),
         int(cameraCapture.get(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT)))

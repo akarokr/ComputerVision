@@ -15,7 +15,7 @@ import numpy as np
 face_cascade = cv2.CascadeClassifier('/home/bruno/Downloads/haarcascade_frontalface_default.xml')
 
 # Object to capture image, default webcam on Ubuntu is video0
-cameraCapture = cv2.VideoCapture(0)
+cameraCapture = cv2.VideoCapture(-1)
 # Size of the image (automatically)
 (w, h) = (int(cameraCapture.get(cv2.cv.CV_CAP_PROP_FRAME_WIDTH)),
         int(cameraCapture.get(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT)))
@@ -32,7 +32,7 @@ while success and cv2.waitKey(1) == -1:
     success, frame = cameraCapture.read()
     gray = cv2.cvtColor(cv2.blur(frame, (5,5)), cv2.COLOR_BGR2GRAY)
     # Detec faces
-    faces = face_cascade.detectMultiScale(gray, 1.5, 2)
+    faces = face_cascade.detectMultiScale(gray,3., 2)
     if debug: print faces
     # For each face, draw a rectangle around it
     for (x,y,w,h) in faces:
