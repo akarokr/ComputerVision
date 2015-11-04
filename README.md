@@ -1,6 +1,8 @@
 # ComputerVision
 Some coding to explore OpenCV and Python....
 
+Estou inserindo uma linha. 
+
 Want to know more? 
 Visit: [My Blog](http://control-aut.com/)
 
